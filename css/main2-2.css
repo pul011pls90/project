@@ -1,0 +1,151 @@
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+} 
+
+@font-face {
+    font-family: TrendSansFive;
+    src: url(/fonts/FontsFree-Net-Trend-Sans-W00-Five.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: Hoves;
+    src: url(/fonts/TTHoves-Bold.woff);
+    font-weight: 100;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(to left,#7819ff,#61f4ff,#cf2dc9,#0955bb) ;
+    background-size: 500% 500%;
+    /* animation: color 12s ease-in-out infinite; */
+}
+ 
+.logocenter{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    font-size: 40px;
+    font-family: TrendSansFive; 
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px  solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 13.75px 560px;
+    margin-top: -15px;
+ }
+
+ .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .navbar a {
+     position: relative;
+     font-size: 30px;
+     font-family: Hoves;
+     color: #fff;
+     font-weight:500;
+     text-decoration: none;
+     margin-left: 40px;
+     padding: 20px;
+ }
+ 
+ .navbar a::before {
+     content: '';
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 0;
+     height: 2px;
+     background: #fff;
+     transition: .45s;
+ }
+ 
+ .navbar a:hover::before {
+     width: 100%;
+ }
+
+.header{
+    position: relative;
+    top: 27.5px;
+    left: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    color:#fff;
+    font-family: Hoves;
+}
+
+
+.pin_container{
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    color:aliceblue;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+    background-color: transparent;
+    
+}
+
+.card {
+    padding:  20px 10px;
+    margin: 15px 10px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-spacing: 15px;
+    backdrop-filter: blur(30px);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 27.635px;
+    background:linear-gradient(to left,#a432b4,#91208d,);
+    font-family: Hoves;
+}
+
+.card_small{
+    grid-row-end: span var(--card_small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.875em;
+    background:linear-gradient(to left,#7819ff,#7661ff,#832dcf,#0955bb) ;
+    background-size: 500% 500%;
+    animation: color 12s ease-in-out infinite;
+}
+.card_small h2{
+    font-size: 0.875em;
+    color: #000;
+}
+
+.card_small a{
+    position: relative;
+    color: #000;
+    top:-17.3575%;
+    font-size: 26.75px;
+}
+
+
+
+
+
+

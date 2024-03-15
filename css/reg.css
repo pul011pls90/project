@@ -1,0 +1,120 @@
+/* @keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}  */
+
+@font-face {
+    font-family: TrendSansFive;
+    src: url(/fonts/FontsFree-Net-Trend-Sans-W00-Five.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: Hoves;
+    src: url(/fonts/TTHoves-Bold.woff);
+    font-weight: 100;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(to left,#5e19ff,#b72dc1,#cf2d4b,#ae2577) ;
+    background-size: 1000% 1000%;
+    animation: color 12s ease-in-out infinite;
+}
+
+.logocenter{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    font-size: 40px;
+    font-family: TrendSansFive; 
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px  solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 550px;
+    margin-top: -15px;
+ }
+
+ .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .navbar a {
+     position: relative;
+     font-size: 30px;
+     font-family: Hoves;
+     color: #fff;
+     font-weight:500;
+     text-decoration: none;
+     margin-left: 40px;
+     padding: 20px;
+ }
+ 
+ .navbar a::before {
+     content: '';
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 0;
+     height: 2px;
+     background: #fff;
+     transition: .45s;
+ }
+ 
+ .navbar a:hover::before {
+     width: 100%;
+ }
+
+ .loader{
+    position: relative;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    transition: opacity 4s, visibility 4s;
+    text-align: center;
+    font-family: Hoves;
+    font-size: 27.625px;
+ }
+.loader--hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+ .loader::after{
+    content: '';
+    width: 75px;
+    height: 75px;
+    border: 15px solid #fff;
+    border-top-color: #000000;
+    border-radius: 50%;
+    animation: loading 1.225s ease infinite;
+ }
+
+ @keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+ }

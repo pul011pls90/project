@@ -1,0 +1,190 @@
+
+:root{
+    --card_width: 250px;
+    --card_border_radius: 16px;
+    --row_increment:10px;
+    --card_small: 26;
+    --card_medium: 33;
+    --card_large: 45;
+}
+
+@font-face {
+    font-family: TrendSansFive;
+    src: url(/fonts/FontsFree-Net-Trend-Sans-W00-Five.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: Hoves;
+    src: url(/fonts/TTHoves-Bold.woff);
+    font-weight: 100;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  #000;
+    background:linear-gradient(to left,#7819ff,#9a09bb) ;
+    background-size: 500% 500%;
+    animation: color 12s ease-in-out infinite;
+}
+
+.logocenter{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    font-size: 40px;
+    font-family: TrendSansFive; 
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px  solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 550px;
+    margin-top: -15px;
+}
+
+ .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .navbar a {
+     position: relative;
+     font-size: 30px;
+     font-family: Hoves;
+     color: #fff;
+     font-weight:500;
+     text-decoration: none;
+     margin-left: 40px;
+     padding: 20px;
+ }
+ 
+ .navbar a::before {
+     content: '';
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 0;
+     height: 2px;
+     background: #fff;
+     transition: .45s;
+ }
+ 
+ .navbar a:hover::before {
+     width: 100%;
+ }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-family: Hoves;
+    transition: ease-in-out .4s;
+}
+
+.header h1{
+    font-size: 20px;
+    font-family: Hoves; 
+    color: #fff;
+    text-decoration: none;
+    font-weight: 100;
+    border: 2px  solid rgba(255, 255, 255, .2);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 13.75px 20px; 
+}
+
+.header:hover{
+    cursor:pointer
+}
+.header:hover{
+    transform: scale(1.35);
+}
+
+.pin_container{
+    margin: 0;
+    padding: 0;
+    width: 80vw;
+    height: 90vh;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    color:aliceblue;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+    background-color: transparent;
+}
+
+.pin_container .h1{
+    font-size: 1em;
+    font-family: serif;
+}
+
+@keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+} 
+
+
+.card {
+    padding:  0px;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+    background:transparent ;
+    background-size: 500% 500%;
+    animation: color 12s ease-in-out infinite;
+    font-family: Hoves;
+}
+
+.card_small{
+    grid-row-end: span var(--card_small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #10111e;
+    font-size: 1.5em;
+}
+.card_small a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.card_medium{
+    grid-row-end: span var(--card_medium);
+    background-color: #2b2c3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+}
+
+
+.card_large{
+    grid-row-end: span var(--card_large);
+}
+

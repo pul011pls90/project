@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+@font-face {
+    font-family: TrendSansFive;
+    src: url(/fonts/FontsFree-Net-Trend-Sans-W00-Five.ttf);
+    font-weight: 100;
+}
+@font-face {
+    font-family: Hoves;
+    src: url(/fonts/TTHoves-Bold.woff);
+    font-weight: 100;
+}
+
+.logocenter{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    font-size: 40px;
+    font-family: TrendSansFive; 
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px  solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 550px;
+    margin-top: -15px;
+ }
+
+ .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
+ .navbar a {
+     position: relative;
+     font-size: 30px;
+     font-family: Hoves;
+     margin-top: 15px;
+     color: #fff;
+     font-weight:500;
+     text-decoration: none;
+     margin-left: 40px;
+     padding: 20px;
+     border: 2px  solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(10px);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 37.65px;
+ }
+ 
+ .navbar a::before {
+     content: '';
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 0;
+     height: 2px;
+     background: #ffffff;
+     transition: .9000s;
+ }
+ 
+ .navbar a:hover::before {
+     width: 100%;
+ }
+
+/*              */
+
+.header{
+    position: relative;
+    top: 27.5px;
+    left: 0;
+    text-align: center;
+    background-color: transparent;
+    color:#fff;
+    font-family: Hoves;
+}
+
+.header h1{
+    font-size: 2.47em;
+}
+
+.header p{
+    font-size: 1.67em;
+}
+
+.container{
+    width: 100%;
+    display:block;
+    block-size: auto;
+    justify-content: center;
+    columns: 4;
+    column-gap: 17.5px;
+    padding: 30px 7.65px;
+}
+
+.container .box{
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 24.635px;
+    padding: 10px 13.35px;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 28.95px;
+    backdrop-filter: blur(30px);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .box img{
+    max-width: 97.695%;
+    max-height: 70%;
+    border-radius: 28.95px;
+    transition: .2s ease ;
+}
+.container .box p{
+    font-size: 20.75px;
+    margin-top: 3.95px;
+    transition: .4s ease ;
+}
+
+.box img:hover{
+    cursor: pointer;
+}
+
+.box p:hover{
+    transform: scale(1.125) ;
+}
+
+.box img:hover{
+    border-radius: 28px;
+    transform: scale(1.025) scaleX(1.025);
+}
+
+@media (max-width: 1000px){
+    .container{
+        width: calc(100%-40px);
+        columns: 3;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        width: calc(100%-40px);
+        columns: 2;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        width: calc(100%-40px);
+        columns: 1;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background:linear-gradient(to left,#7819ff,#616eff) ;
+    background-size: 500% 500%;
+    animation: color 12s ease-in-out infinite;
+}
+
+/* @keyframes color{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}  */
+
+.btns{
+    position: absolute;
+    top:216px;
+    left:328px;
+    display: flex;
+}
+
+.btn{
+    background: transparent;
+    border: none;
+}
+
+.btn i:hover{
+    cursor: pointer;
+}
